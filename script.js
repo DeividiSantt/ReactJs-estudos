@@ -1,20 +1,32 @@
 
 
-function entrar(){
 
-    let area = document.getElementById("area");
-    let texto = prompt('Digite seu nome');
+function pedir(){
+    const cardapio = {
+        0: "Sorvete",
+        1: "Suco",
+        2: "Coca-Cola",
+        3: "Agua gelada"
+    };
 
-    if(texto == '' || texto == null){
-        alert('Digite seu nome novamente')
-        area.innerHTML = 'Bem Vindo ...'
-    }else{
-        area.innerHTML = 'bem vindo ' + texto
-    }   
-}
+    let pedido = prompt("Digite o número do seu pedido:\n0 - Sorvete\n1 - Suco\n2 - Coca-Cola\n3 - Água gelada");
+    let pedidoContado = Number(pedido)
 
-function entrar2(nome){
-    let area = document.getElementById("area");
-    let texto = prompt('Digite seu sobrenome');
-    area.innerHTML = nome + " " + texto
+    if(isNaN(pedidoContado)){
+        alert("Por favor, insira um numero valido.")
+        return;
+    }
+        
+    
+    switch(pedidoContado){
+
+        case 0:
+        case 1: 
+        case 2:
+        case 3:
+            alert(`Voce pediu um(a) ${cardapio[pedidoContado]}.`)
+            break;
+        default:
+        alert("Ops! Não temos essa opção no cardapio")
+    }
 }
