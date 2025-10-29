@@ -1,6 +1,24 @@
-function calcularForça(massa, velocidade){
-    let resultado = massa * velocidade;
-    console.log(`O resultado é igual a: ${resultado}J`)
-}
 
-calcularForça(20, 100)
+
+const lista  = [1,2,3,4,5,6]
+
+
+const novaLista = lista.map(function(item, index){
+    return item + index
+})
+
+console.log(novaLista)
+
+
+const soma = lista.reduce(function(total,proximo){
+    return total + proximo
+})
+
+console.log(soma)
+
+
+const fid = lista.find(function(item){
+    return item === 6;
+})
+
+console.log(fid)
