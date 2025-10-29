@@ -1,9 +1,6 @@
-let nome = '';
-
-if ( typeof localStorage.nome == 'undefined') {
-  localStorage.nome = prompt("Digite seu nome:");
+function calcularForça(massa, velocidade){
+    let resultado = massa * velocidade;
+    console.log(`O resultado é igual a: ${resultado}J`)
 }
 
-nome = localStorage.nome
-
-document.getElementById('nome').innerHTML = nome;
+calcularForça(20, 100)
