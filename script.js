@@ -1,24 +1,11 @@
+let nomes = [
+    {nome: 'Matheus', idade: 18},
+    {nome: 'Maria', idade: 25},
+    {nome: 'henrique', idade: 15}
+]
 
 
-const lista  = [1,2,3,4,5,6]
 
-
-const novaLista = lista.map(function(item, index){
-    return item + index
-})
-
-console.log(novaLista)
-
-
-const soma = lista.reduce(function(total,proximo){
-    return total + proximo
-})
-
-console.log(soma)
-
-
-const fid = lista.find(function(item){
-    return item === 6;
-})
-
-console.log(fid)
+if(console.log(nomes.every(nome => nome.idade >= 18))){
+    console.log("todos sao maiores de 18")
+}else{console.log("alguem eh de menor")}
