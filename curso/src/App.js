@@ -1,25 +1,27 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class App extends Component{
-
-  constructor(props){
-    super(props)
-    this.state = {
-      hora: '00:00:00'
-     }
-  }
-
-  componentDidMount(){
     
-  }
+    
+    constructor(props){
+    super(props);
+    this.state = {
+        status: 1
+    }
+}
+    
+    render(){
+        return(
+            <div>
+              {this.state.status === 1 &&
+                <h1>Bem-Vindo ao sistema</h1>
 
-  render(){
-    return(
-      <div>
-        <h1>Meu projeto {this.state.hora}</h1>
-      </div>
-    )
-  }
+              }
+
+              console.log("vv")
+            </div>
+        )
+    }
 }
 
 export default App
