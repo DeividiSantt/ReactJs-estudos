@@ -20,14 +20,15 @@ class App extends Component{
         if(this.timer !== null){
             clearInterval(this.timer)
             this.timer = null;
-            state.botao = "VAI"
+            state.botao = "INCREMENTAR"
+            state.cronometro ++
         }else{
             this.timer = setInterval(() => {
             let state = this.state
             state.cronometro += 0.1;
             this.setState(state)
             }, 100);
-            state.botao = 'PAUSAR'
+            state.botao = 'PARAR'
 
         }
 
